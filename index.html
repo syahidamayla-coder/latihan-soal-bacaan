@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f4">
+  <meta name="description" content="Lughati adalah aplikasi latihan Bahasa Arab untuk keterampilan menyimak dan membaca.">
+  <title>Lughati — Latihan Bahasa Arab</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/exercises.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda" data-view="home" aria-label="Lughati beranda">
+        <span class="brand-mark" aria-hidden="true">ل</span>
+        <span class="brand-copy"><strong>Lughati</strong><small>ARABIC LEARNING</small></span>
+      </a>
+
+      <div class="nav-label">MENU UTAMA</div>
+      <nav class="main-nav">
+        <button class="nav-item active" data-view="home"><span class="nav-icon">⌂</span><span>Beranda</span></button>
+        <button class="nav-item" data-view="listening"><span class="nav-icon">♫</span><span>Latihan Menyimak</span><span class="nav-count">3</span></button>
+        <button class="nav-item" data-view="reading"><span class="nav-icon">▤</span><span>Latihan Membaca</span><span class="nav-count">3</span></button>
+        <button class="nav-item" data-view="progress"><span class="nav-icon">↗</span><span>Progres Belajar</span></button>
+      </nav>
+
+      <div class="sidebar-tip">
+        <div class="tip-icon">✦</div>
+        <strong>Belajar sedikit, rutin.</strong>
+        <p>Latihan singkat setiap hari membantu pemahaman Bahasa Arab berkembang.</p>
+      </div>
+
+      <div class="sidebar-bottom">
+        <span class="status-dot"></span>
+        <span>Mode belajar mandiri</span>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <div class="topbar-heading">
+          <p class="eyebrow">RUANG BELAJAR BAHASA ARAB</p>
+          <h1 id="pageTitle">Selamat datang di Lughati</h1>
+        </div>
+        <div class="topbar-right">
+          <span class="topbar-pill"><span class="pill-dot"></span> Belajar mandiri</span>
+          <div class="avatar" aria-label="Pengguna">ط</div>
+        </div>
+      </header>
+
+      <main id="appView" tabindex="-1">
+        <div class="loading-state">Menyiapkan ruang belajar…</div>
+      </main>
+
+      <footer class="app-footer">
+        <span>© <span id="yearNow"></span> Lughati</span>
+        <span>Latihan Bahasa Arab, selangkah demi selangkah <span class="footer-star">✦</span></span>
+      </footer>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
