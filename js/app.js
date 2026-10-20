@@ -131,7 +131,7 @@
       </section>
 
       <section class="stats-grid" aria-label="Ringkasan progres belajar">
-        <div class="stat-card"><div class="stat-icon green">▤</div><div><strong class="stat-number">${completed}<span style="font-size:13px;color:#9aa69e;font-weight:500">/${EXERCISES.length}</span></strong><span class="stat-label">Materi diselesaikan</span></div></div>
+        <div class="stat-card"><div class="stat-icon green">▤</div><div><strong class="stat-number">${completed}<span style="font-size:13px;color:#92777F;font-weight:500">/${EXERCISES.length}</span></strong><span class="stat-label">Materi diselesaikan</span></div></div>
         <div class="stat-card"><div class="stat-icon yellow">✦</div><div><strong class="stat-number">${average}%</strong><span class="stat-label">Rata-rata nilai latihan</span></div></div>
         <div class="stat-card"><div class="stat-icon blue">◷</div><div><strong class="stat-number">${progress.attempts.length}</strong><span class="stat-label">Total latihan dikerjakan</span></div></div>
       </section>
@@ -325,7 +325,7 @@
       const date = new Date(attempt.date);
       const formattedDate = Number.isNaN(date.getTime()) ? '-' : date.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
       return `<tr><td>${escapeHTML(exercise ? exercise.title : 'Materi tidak ditemukan')}</td><td>${escapeHTML(formattedDate)}</td><td>${attempt.correctCount}/${attempt.total}</td><td><span class="score-badge">${attempt.score}%</span></td></tr>`;
-    }).join('') : `<tr><td colspan="4" style="text-align:center;padding:28px;color:#8b9991">Belum ada latihan yang selesai. Mulai latihan pertama untuk mengisi riwayatmu.</td></tr>`;
+    }).join('') : `<tr><td colspan="4" style="text-align:center;padding:28px;color:#92777F">Belum ada latihan yang selesai. Mulai latihan pertama untuk mengisi riwayatmu.</td></tr>`;
     return `
       <section class="catalog-head"><div><p class="eyebrow">PERJALANAN BELAJARMU</p><h2>Progres Belajar</h2><p>Lihat materi yang sudah dicoba, rata-rata nilai, dan riwayat latihanmu.</p></div><div class="catalog-symbol">📈</div></section>
       <section class="progress-summary">
